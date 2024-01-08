@@ -7,7 +7,35 @@ const config: Config = {
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                background: {
+                    DEFAULT: "var(--background)",
+                    2: "var(--background-2)",
+                    3: "var(--background-3)",
+                },
+
+                primary: "var(--primary)",
+
+                border: "var(--border)",
+
+                sidebar: {
+                    DEFAULT: "var(--sidebar-dark)",
+                    2: "var(--sidebar-dark-2)",
+                },
+
+                text: {
+                    DEFAULT: "var(--text)",
+                    2: "var(--text-2)",
+                    3: "var(--text-3)",
+                    4: "var(--text-4)",
+                },
+
+                white: "var(--white)",
+
+                transparent: "var(--transparent)",
+            },
+        },
     },
     plugins: [],
 };
