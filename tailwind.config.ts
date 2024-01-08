@@ -35,6 +35,10 @@ const config: Config = {
 
                 transparent: "var(--transparent)",
             },
+
+            gridTemplateColumns: {
+                layout: "224px minmax(0, 1fr)",
+            },
         },
     },
     plugins: [],
