@@ -10,25 +10,25 @@ const config: Config = {
         extend: {
             colors: {
                 background: {
-                    DEFAULT: "var(--background)",
-                    2: "var(--background-2)",
-                    3: "var(--background-3)",
+                    DEFAULT: "#fafafa",
+                    2: "#f2f2f2",
+                    3: "#e6e6e6",
                 },
 
-                primary: "var(--primary)",
+                primary: "#146eb4",
 
-                border: "var(--border)",
+                border: "#d9d9d9",
 
                 sidebar: {
-                    DEFAULT: "var(--sidebar-dark)",
-                    2: "var(--sidebar-dark-2)",
+                    DEFAULT: "#1e2640",
+                    2: "#353c53",
                 },
 
                 text: {
-                    DEFAULT: "var(--text)",
-                    2: "var(--text-2)",
-                    3: "var(--text-3)",
-                    4: "var(--text-4)",
+                    DEFAULT: "#1a181e",
+                    2: "#4d4d4d",
+                    3: "#808080",
+                    4: "#999999",
                 },
 
                 white: "#ffffff",
