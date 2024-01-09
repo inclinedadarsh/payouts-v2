@@ -1,3 +1,5 @@
+"use client";
+
 import { SearchProps } from "@/types";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -8,6 +10,9 @@ const Search = ({
     placeholder,
     size = "normal",
     variant = "default",
+    searchValue,
+    handleSearchValue,
+    inputType = "text",
 }: SearchProps) => {
     return (
         <div
@@ -27,8 +32,10 @@ const Search = ({
                 alt='Search Icon'
             />
             <input
-                type='text'
+                type={inputType}
                 placeholder={placeholder}
+                value={searchValue}
+                onChange={(e) => handleSearchValue(e)}
                 className={cn(
                     "placeholder:text-sm grow bg-transparent outline-none",
                     variant === "nav" && "placeholder:text-text-3",

@@ -6,6 +6,8 @@ import { infoIcon, triangleDown } from "@/assets/icons";
 const TransactionTable = ({
     className,
     transactions,
+    isSearching,
+    searchValue,
     ...props
 }: TransactionTableProps) => {
     return (
@@ -29,35 +31,73 @@ const TransactionTable = ({
                 </tr>
             </thead>
             <tbody className='block'>
-                {transactions.map((transaction, index) => (
-                    <tr
-                        key={index}
-                        className={`grid grid-cols-4 gap-10 px-3 py-[10px] text-text text-sm hover:bg-background-2/50 ${
-                            index !== transactions.length - 1 &&
-                            "border-b border-background-3"
-                        }`}
-                    >
-                        <td className='text-left text-primary font-medium'>
-                            #{transaction.id}
-                        </td>
-                        <td className='text-left'>
-                            {new Date(transaction.orderDate).toLocaleString(
-                                "en-US",
-                                {
-                                    day: "numeric",
-                                    month: "long",
-                                    year: "numeric",
-                                }
-                            )}
-                        </td>
-                        <td className='text-right'>
-                            ₹{transaction.orderAmount.toLocaleString()}
-                        </td>
-                        <td className='text-right'>
-                            ₹{transaction.transactionFees.toLocaleString()}
-                        </td>
-                    </tr>
-                ))}
+                {!isSearching &&
+                    transactions.map((transaction, index) => (
+                        <tr
+                            key={index}
+                            className={`grid grid-cols-4 gap-10 px-3 py-[10px] text-text text-sm hover:bg-background-2/50 ${
+                                index !== transactions.length - 1 &&
+                                "border-b border-background-3"
+                            }`}
+                        >
+                            <td className='text-left text-primary font-medium'>
+                                #{transaction.id}
+                            </td>
+                            <td className='text-left'>
+                                {new Date(transaction.orderDate).toLocaleString(
+                                    "en-US",
+                                    {
+                                        day: "numeric",
+                                        month: "long",
+                                        year: "numeric",
+                                    }
+                                )}
+                            </td>
+                            <td className='text-right'>
+                                ₹{transaction.orderAmount.toLocaleString()}
+                            </td>
+                            <td className='text-right'>
+                                ₹{transaction.transactionFees.toLocaleString()}
+                            </td>
+                        </tr>
+                    ))}
+                {isSearching &&
+                    searchValue &&
+                    transactions
+                        .filter((transaction) =>
+                            transaction.id
+                                .toString()
+                                .includes(searchValue?.toString())
+                        )
+                        .map((transaction, index) => (
+                            <tr
+                                key={index}
+                                className={`grid grid-cols-4 gap-10 px-3 py-[10px] text-text text-sm hover:bg-background-2/50 ${
+                                    index !== transactions.length - 1 &&
+                                    "border-b border-background-3"
+                                }`}
+                            >
+                                <td className='text-left text-primary font-medium'>
+                                    #{transaction.id}
+                                </td>
+                                <td className='text-left'>
+                                    {new Date(
+                                        transaction.orderDate
+                                    ).toLocaleString("en-US", {
+                                        day: "numeric",
+                                        month: "long",
+                                        year: "numeric",
+                                    })}
+                                </td>
+                                <td className='text-right'>
+                                    ₹{transaction.orderAmount.toLocaleString()}
+                                </td>
+                                <td className='text-right'>
+                                    ₹
+                                    {transaction.transactionFees.toLocaleString()}
+                                </td>
+                            </tr>
+                        ))}
             </tbody>
         </table>
     );

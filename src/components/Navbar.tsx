@@ -1,16 +1,20 @@
-import {
-    helpIcon,
-    menuDropdown,
-    menuMessage,
-    searchIcon,
-} from "@/assets/icons";
+"use client";
+
+import { helpIcon, menuDropdown, menuMessage } from "@/assets/icons";
 import { cn } from "@/lib/utils";
 import { NavbarProps } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import Search from "./ui/Search";
+import { useState } from "react";
 
 const Navbar = ({ className, ...props }: NavbarProps) => {
+    const [searchValue, setSearchValue] = useState<string>("");
+
+    const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchValue(e.target.value);
+    };
+
     return (
         <nav
             className={cn(
@@ -28,6 +32,8 @@ const Navbar = ({ className, ...props }: NavbarProps) => {
             <Search
                 placeholder='Search features, tutorials, etc.'
                 variant='nav'
+                searchValue={searchValue}
+                handleSearchValue={handleSearch}
             />
             <div className='flex gap-3 grow justify-end'>
                 <Link href='#'>

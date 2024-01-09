@@ -21,6 +21,8 @@ export interface TransactionTableProps
     extends React.HTMLAttributes<HTMLTableElement> {
     className?: string;
     transactions: OrderType[];
+    searchValue?: undefined | number;
+    isSearching?: boolean;
 }
 
 export type SidebarLinks = {
@@ -46,6 +48,9 @@ export interface SearchProps extends React.HTMLAttributes<HTMLDivElement> {
     placeholder: string;
     size?: "normal" | "sm";
     variant?: "nav" | "default";
+    searchValue: undefined | number | string;
+    handleSearchValue: (value: React.ChangeEvent<HTMLInputElement>) => void;
+    inputType?: "text" | "number";
 }
 
 export type activeLink =
