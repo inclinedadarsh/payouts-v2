@@ -31,9 +31,9 @@ const config: Config = {
                     4: "var(--text-4)",
                 },
 
-                white: "var(--white)",
+                white: "#ffffff",
 
-                transparent: "var(--transparent)",
+                transparent: "#ffffff00",
             },
 
             gridTemplateColumns: {

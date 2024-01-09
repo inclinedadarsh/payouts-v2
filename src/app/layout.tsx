@@ -21,7 +21,7 @@ export default function RootLayout({
             <body
                 className={`${inter.className} grid grid-rows-2 grid-cols-layout`}
             >
-                <Sidebar className='hover:bg-[#0f0] row-span-2 w-[224px] col-span-1' />
+                <Sidebar className='row-span-2' />
                 <Navbar />
                 {children}
             </body>
