@@ -30,6 +30,7 @@ import pluginsSolid from "./plugins_solid.svg";
 import productsOutline from "./products_outline.svg";
 import productsSolid from "./products_solid.svg";
 import searchIcon from "./search.svg";
+import searchSmallIcon from "./search_small.svg";
 import sortIcon from "./sort.svg";
 import toolsOutline from "./tools_outline.svg";
 import toolsSolid from "./tools_solid.svg";
@@ -69,6 +70,7 @@ export {
     productsOutline,
     productsSolid,
     searchIcon,
+    searchSmallIcon,
     sortIcon,
     toolsOutline,
     toolsSolid,

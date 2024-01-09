@@ -41,6 +41,13 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     stretch?: boolean;
 }
 
+export interface SearchProps extends React.HTMLAttributes<HTMLDivElement> {
+    className?: string;
+    placeholder: string;
+    size?: "normal" | "sm";
+    variant?: "nav" | "default";
+}
+
 export type activeLink =
     | "Home"
     | "Orders"

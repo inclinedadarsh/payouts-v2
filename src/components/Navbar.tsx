@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { NavbarProps } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
+import Search from "./ui/Search";
 
 const Navbar = ({ className, ...props }: NavbarProps) => {
     return (
@@ -24,14 +25,10 @@ const Navbar = ({ className, ...props }: NavbarProps) => {
                     <Image src={helpIcon} alt='Help icon' /> How it works
                 </span>
             </div>
-            <div className='flex px-4 py-[9px] gap-2 max-w-[400px] bg-background-2 rounded-md outline-2 focus-within:outline focus-within:outline-primary hover:bg-background-3 items-center grow'>
-                <Image src={searchIcon} alt='Search Icon' />
-                <input
-                    type='text'
-                    placeholder='Search features, tutorials, etc.'
-                    className='placeholder:text-text-3 placeholder:text-sm grow bg-transparent outline-none'
-                />
-            </div>
+            <Search
+                placeholder='Search features, tutorials, etc.'
+                variant='nav'
+            />
             <div className='flex gap-3 grow justify-end'>
                 <Link href='#'>
                     <Image src={menuMessage} alt='Message Icon' />
