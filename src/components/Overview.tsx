@@ -5,7 +5,7 @@ import Button from "./ui/Button";
 
 const Overview = ({ className, ...props }: OverviewProps) => {
     return (
-        <div className={cn(className, "space-y-8")} {...props}>
+        <div className={cn(className, "space-y-6")} {...props}>
             <div className='flex justify-between'>
                 <h2 className='text-xl font-medium'>Overview</h2>
                 <Button

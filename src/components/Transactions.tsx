@@ -28,7 +28,6 @@ const Transactions = ({ className, ...props }: TransactionsProps) => {
                         <Button variant='outline' size='icon'>
                             <Image src={downloadIcon} alt='Download Icon' />
                         </Button>
-                        S
                     </div>
                 </div>
                 <TransactionTable transactions={ORDERS} className='mt-3' />

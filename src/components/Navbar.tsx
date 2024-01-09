@@ -15,7 +15,7 @@ const Navbar = ({ className, ...props }: NavbarProps) => {
         <nav
             className={cn(
                 className,
-                "px-8 py-3 flex justify-between gap-4 border-b-2 border-border"
+                "px-8 py-[10px] flex justify-between gap-4 border-b-2 border-border"
             )}
             {...props}
         >

@@ -17,7 +17,8 @@ const Search = ({
                 size === "sm" && "max-w-[248px]",
                 variant === "default" &&
                     "bg-transparent hover:bg-background-2 border border-border",
-                variant === "nav" && "bg-background-2 hover:bg-background-3",
+                variant === "nav" &&
+                    "bg-background-2 hover:bg-background-3 h-10",
                 variant === className
             )}
         >
