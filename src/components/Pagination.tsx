@@ -1,83 +1,60 @@
 import { chevronLeft, chevronRight } from "@/assets/icons";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "./ui/Button";
 
 const Pagination = () => {
     return (
         <div className='flex items-center gap-6 justify-center mt-6'>
-            <button className='p-1.5 pr-3 border border-border rounded text-sm font-medium text-text-2 flex items-center hover:bg-background focus-visible:bg-background gap-1.5'>
-                <Image src={chevronLeft} alt='Left Chevron' />
+            <Button
+                variant='outline'
+                icon={chevronLeft}
+                iconPosition='left'
+                className='pl-1.5'
+            >
                 Previous
-            </button>
+            </Button>
             <div className='flex gap-2'>
-                <Link
-                    className='text-sm w-7 h-7 flex justify-center items-center rounded hover:bg-background-2'
-                    href='#'
-                >
+                <Button variant='ghost' size='sm'>
                     1
-                </Link>
+                </Button>
                 <span className='w-7 h-7 flex justify-center items-center'>
                     ...
                 </span>
-                <Link
-                    className='text-sm w-7 h-7 flex justify-center items-center rounded bg-primary text-white'
-                    href='#'
-                >
-                    10
-                </Link>
-                <Link
-                    className='text-sm w-7 h-7 flex justify-center items-center rounded hover:bg-background-2'
-                    href='#'
-                >
+                <Button size='sm'>10</Button>
+                <Button variant='ghost' size='sm'>
                     11
-                </Link>
-                <Link
-                    className='text-sm w-7 h-7 flex justify-center items-center rounded hover:bg-background-2'
-                    href='#'
-                >
+                </Button>
+                <Button variant='ghost' size='sm'>
                     12
-                </Link>
-                <Link
-                    className='text-sm w-7 h-7 flex justify-center items-center rounded hover:bg-background-2'
-                    href='#'
-                >
+                </Button>
+                <Button variant='ghost' size='sm'>
                     13
-                </Link>
-                <Link
-                    className='text-sm w-7 h-7 flex justify-center items-center rounded hover:bg-background-2'
-                    href='#'
-                >
+                </Button>
+                <Button variant='ghost' size='sm'>
                     14
-                </Link>
-                <Link
-                    className='text-sm w-7 h-7 flex justify-center items-center rounded hover:bg-background-2'
-                    href='#'
-                >
+                </Button>
+                <Button variant='ghost' size='sm'>
                     15
-                </Link>
-                <Link
-                    className='text-sm w-7 h-7 flex justify-center items-center rounded hover:bg-background-2'
-                    href='#'
-                >
+                </Button>
+                <Button variant='ghost' size='sm'>
                     16
-                </Link>
-                <Link
-                    className='text-sm w-7 h-7 flex justify-center items-center rounded hover:bg-background-2'
-                    href='#'
-                >
+                </Button>
+                <Button variant='ghost' size='sm'>
                     17
-                </Link>
-                <Link
-                    className='text-sm w-7 h-7 flex justify-center items-center rounded hover:bg-background-2'
-                    href='#'
-                >
+                </Button>
+                <Button variant='ghost' size='sm'>
                     18
-                </Link>
+                </Button>
             </div>
-            <button className='p-1.5 pl-3 border border-border rounded text-sm font-medium text-text-2 flex items-center hover:bg-background focus-visible:bg-background gap-1.5'>
+            <Button
+                variant='outline'
+                icon={chevronRight}
+                iconPosition='right'
+                className='pr-1.5'
+            >
                 Next
-                <Image src={chevronRight} alt='Right Chevron' />
-            </button>
+            </Button>
         </div>
     );
 };

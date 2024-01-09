@@ -34,7 +34,7 @@ const TransactionTable = ({
                         key={index}
                         className={`grid grid-cols-4 gap-10 px-3 py-[10px] text-text text-sm hover:bg-background-2/50 ${
                             index !== transactions.length - 1 &&
-                            "border-b border-border"
+                            "border-b border-background-3"
                         }`}
                     >
                         <td className='text-left text-primary font-medium'>

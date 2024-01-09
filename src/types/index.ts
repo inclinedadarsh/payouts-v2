@@ -31,6 +31,16 @@ export type SidebarLinks = {
     };
 };
 
+export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+    className?: string;
+    children: React.ReactNode;
+    variant?: "primary" | "outline" | "ghost";
+    size?: "normal" | "icon" | "sm";
+    icon?: StaticImageData;
+    iconPosition?: "left" | "right";
+    stretch?: boolean;
+}
+
 export type activeLink =
     | "Home"
     | "Orders"

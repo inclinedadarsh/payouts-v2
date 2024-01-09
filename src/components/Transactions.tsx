@@ -6,6 +6,7 @@ import Image from "next/image";
 import TransactionTable from "./TransactionTable";
 import { ORDERS } from "@/constants";
 import Pagination from "./Pagination";
+import Button from "./ui/Button";
 
 const Transactions = ({ className, ...props }: TransactionsProps) => {
     return (
@@ -22,12 +23,17 @@ const Transactions = ({ className, ...props }: TransactionsProps) => {
                         />
                     </div>
                     <div className='flex gap-3'>
-                        <button className='h-9 justify-center items-center border border-border hover:bg-background-2/75 rounded px-3 py-1.5 flex gap-1.5'>
-                            Sort <Image src={sortIcon} alt='Sort Icon' />
-                        </button>
-                        <button className='flex h-9 w-9 justify-center items-center border border-border hover:bg-background-2/75 rounded py-1.5'>
+                        <Button
+                            icon={sortIcon}
+                            iconPosition='right'
+                            variant='outline'
+                            className='text-base h-9 font-medium'
+                        >
+                            Sort
+                        </Button>
+                        <Button variant='outline' size='icon'>
                             <Image src={downloadIcon} alt='Download Icon' />
-                        </button>
+                        </Button>
                     </div>
                 </div>
                 <TransactionTable transactions={ORDERS} className='mt-3' />
