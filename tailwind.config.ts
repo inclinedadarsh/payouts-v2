@@ -42,6 +42,9 @@ const config: Config = {
             gridTemplateRows: {
                 layout: "auto 1fr",
             },
+            boxShadow: {
+                "overview-card": "0px 2px 6px 0px #1a181e0a",
+            },
         },
     },
     plugins: [],

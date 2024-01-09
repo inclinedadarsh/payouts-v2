@@ -8,6 +8,21 @@ export interface NavbarProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
 }
 
+export interface OverviewProps extends React.HTMLAttributes<HTMLDivElement> {
+    className?: string;
+}
+
+export interface TransactionsProps
+    extends React.HTMLAttributes<HTMLDivElement> {
+    className?: string;
+}
+
+export interface TransactionTableProps
+    extends React.HTMLAttributes<HTMLTableElement> {
+    className?: string;
+    transactions: OrderType[];
+}
+
 export type SidebarLinks = {
     name: activeLink;
     icon: {
@@ -29,3 +44,10 @@ export type activeLink =
     | "Audience"
     | "Appearance"
     | "Plugins";
+
+export type OrderType = {
+    id: number;
+    orderDate: string;
+    orderAmount: number;
+    transactionFees: number;
+};
