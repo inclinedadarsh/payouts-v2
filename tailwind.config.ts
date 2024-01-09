@@ -39,6 +39,9 @@ const config: Config = {
             gridTemplateColumns: {
                 layout: "224px minmax(0, 1fr)",
             },
+            gridTemplateRows: {
+                layout: "auto 1fr",
+            },
         },
     },
     plugins: [],

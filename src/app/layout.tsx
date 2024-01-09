@@ -19,10 +19,10 @@ export default function RootLayout({
     return (
         <html lang='en'>
             <body
-                className={`${inter.className} grid grid-rows-2 grid-cols-layout`}
+                className={`${inter.className} text-text grid grid-rows-layout grid-cols-layout`}
             >
                 <Sidebar className='row-span-2' />
-                <Navbar />
+                <Navbar className='' />
                 {children}
             </body>
         </html>
